@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:ignore="ExtraText">
+
+    <!-- Header Text (Purple Background) -->
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="JOSH'S CALCULATOR"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:background="#6200EE"
+        tools:ignore="HardcodedText" />
+
+    <!-- Space between Header and Output -->
+    <View
+        android:layout_width="match_parent"
+        android:background="#000000"
+        android:layout_height="50sp" />
+
+    <!-- Output Display Area (White background, Black Text) -->
+    <TextView
+        android:id="@+id/tvInput"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#D1D0D0"
+        android:gravity="end"
+        android:padding="10dp"
+        android:textSize="32sp"
+        android:text="0"
+        android:textColor="#000000"
+        tools:ignore="HardcodedText" />
+
+    <!-- Space between Output and Buttons -->
+    <View
+        android:layout_width="match_parent"
+        android:background="#000000"
+        android:layout_height="90sp" />
+
+    <!-- View behind Buttons (Grey Background) -->
+    <LinearLayout
+        android:id="@+id/buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#000000"
+        android:orientation="vertical"
+        android:paddingVertical="33dp"
+        tools:ignore="ObsoleteLayoutParam">
+
+        <!-- Buttons Layout -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            tools:ignore="UselessParent">
+
+            <!-- Row 1 (Clear, Backspace, %, /) -->
+            <TableRow>
+
+                <Button
+                    android:id="@+id/btnClear"
+                    style="@style/SpecialCalcButton"
+                    android:text="@string/ac" />
+
+                <Button
+                    android:id="@+id/btnBackspace"
+                    style="@style/SpecialCalcButton"
+                    android:text="@string/backspace" />
+
+                <Button
+                    android:id="@+id/btnPercent"
+                    style="@style/SpecialCalcButton"
+                    android:text="@string/percentage" />
+
+                <Button
+                    android:id="@+id/btnDivide"
+                    style="@style/SpecialCalcButton"
+                    android:text="@string/divide" />
+            </TableRow>
+
+            <!-- Row 2 (7, 8, 9, x) -->
+            <TableRow>
+
+                <Button
+                    android:id="@+id/btn7"
+                    style="@style/CalcButton"
+                    android:text="@string/_7" />
+
+                <Button
+                    android:id="@+id/btn8"
+                    style="@style/CalcButton"
+                    android:text="@string/_8" />
+
+                <Button
+                    android:id="@+id/btn9"
+                    style="@style/CalcButton"
+                    android:text="@string/_9" />
+
+                <Button
+                    android:id="@+id/btnMultiply"
+                    style="@style/SpecialCalcButton"
+                    android:text="@string/x" />
+            </TableRow>
+
+            <!-- Row 3 (4, 5, 6, -) -->
+            <TableRow>
+
+                <Button
+                    android:id="@+id/btn4"
+                    style="@style/CalcButton"
+                    android:text="@string/_4" />
+
+                <Button
+                    android:id="@+id/btn5"
+                    style="@style/CalcButton"
+                    android:text="@string/_5" />
+
+                <Button
+                    android:id="@+id/btn6"
+                    style="@style/CalcButton"
+                    android:text="@string/_6" />
+
+                <Button
+                    android:id="@+id/btnSubtract"
+                    style="@style/SpecialCalcButton"
+                    android:text="@string/subtract" />
+            </TableRow>
+
+            <!-- Row 4 (1, 2, 3, +) -->
+            <TableRow>
+
+                <Button
+                    android:id="@+id/btn1"
+                    style="@style/CalcButton"
+                    android:text="@string/_1" />
+
+                <Button
+                    android:id="@+id/btn2"
+                    style="@style/CalcButton"
+                    android:text="@string/_2" />
+
+                <Button
+                    android:id="@+id/btn3"
+                    style="@style/CalcButton"
+                    android:text="@string/_3" />
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    style="@style/SpecialCalcButton"
+                    android:text="@string/add" />
+            </TableRow>
+
+            <!-- Row 5 (=, 0, ., =) -->
+            <TableRow>
+
+                <Button
+                    android:id="@+id/btnEquals1"
+                    style="@style/EqualCalcButton"
+                    android:text="@string/equal1" />
+
+                <Button
+                    android:id="@+id/btn0"
+                    style="@style/CalcButton"
+                    android:text="@string/_0"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:id="@+id/btnDecimal"
+                    style="@style/CalcButton"
+                    android:text="@string/point" />
+
+                <Button
+                    android:id="@+id/btnEquals2"
+                    style="@style/EqualCalcButton"
+                    android:text="@string/equal2" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+</LinearLayout>
